@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Sam's Portfolio</title>
+  <style>
+    body { position: relative; }
+    section { height: 100vh; padding-top: 70px; text-align: center; }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-jeromee">
+
+  <nav id="navbar-jeromee" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home" class="bg-light">
+    <h1>Hi, I'm jerome mate</h1>
+    <p>Welcome to my average portfolio.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div id="projectSlide" class="carousel slide bg-secondary mx-auto" style="max-width: 600px;" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-block w-100 vh-50 pt-5 text-white" style="height:300px;">Project 1</div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block w-100 vh-50 pt-5 text-white" style="height:300px;">Project 2</div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectSlide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectSlide" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-light">
+    <h2>Contact Me</h2>
+    <p>Email: jeromemickael6@email.com</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

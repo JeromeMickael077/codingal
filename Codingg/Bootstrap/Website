@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model Example</title>
+    <style type="text/css">
+        .example1 {
+            width:220px;
+            background-color: yellow;
+            padding:0px;
+            border:0px;
+            margin:0px; 
+        }
+        .example2 {
+            width:220px;
+            background-color: green;
+            padding:50px;
+            border:5px solid black;
+            margin:40px 20px; 
+        }
+        hr {
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model Example</h1>
+    <hr>
+    <p class="example1">My Content  1</p>
+    <hr style="width: 10%; height: 10px; color: blue;">
+    <p class="example2">Introduction 2</p>
+    <hr style="width: 20%; height: 1px; color:blue;">
+</body>
+</html>
+
+    <h2>Jerome's Cool Website</h2>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Jerome's Profile">
+        <p>
+            This is my website! I am learning how to use the float property 
+            to make my images sit nicely next to my text instead of just 
+            stacking on top of each other. It makes the layout look much cleaner!
+        </p>
+    </div>
+    <style>
+    h2 {
+    text-align: center;
+    color: darkblue;
+    font-family: sans-serif;
+}
+</style>
+</body>
+</html>
+
+<h2>My hobbies</h2>
+<p> I love coding, hiking, and photography. In my free time, I enjoy exploring new technologies and capturing beautiful moments through my camera lens.</p>
+<style>
+    h2 {
+    text-align: center;
+    color: red;
+    font-family: sans-serif;
+}
+</style>
+    <style>
+        ol {
+            background-color: lightblue;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+   
+   </style>
+    <li>1. Coding</li>
+    <li>2. Hiking</li>
+    <li>3. Photography</li>
+
+ <p> Above are my favorite hobbies in order of preference.</p>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <h1>hello_my_name_is_JMG</h1>
+        <h1 id="demo"></h1>
+        <script src="demo.js"></script>
+    </body>
+</html>
+<!-- Social media page-->
+ <section id="social-media">
+    <div class="container py-5 text-white">
+        <h3 class="text-warning">Social Media</h3>
+        <h2>Follow Me</h2>
+
+        <div class="row mt-4">
+            <div class="col-md-3 col-6 text-center">
+                <a href="#" class="text-white">
+                    <i class="fab fa-facebook fa-3x"></i>
+                    <h5 class="mt-2">Github</h5>
+                </a>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <div class ="media_link d-flex justify-content-center">
+                    <i class="fab fa-twitter fa-3x"></i>
+                    <h5 class="mt-2">Twitter</h5>
+                </div>
+            </div>
+            <!-- Instagram -->
+            <div class="col-md-3 col-6 text-center">
+                <div class ="media_link d-flex justify-content-center">
+                  <i class="fab fa-instagram fa-3x"></i>
+                    <h5 class="mt-2">Instagram</h5>
+                </div>
+            </div>
+            <!-- LinkedIn -->
+            <div class="col-md-3 col-6 text-center">
+                <div href="#" class="text-white">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                    <h5 class="mt-2">LinkedIn</h5>
+                </div>
+            </div>

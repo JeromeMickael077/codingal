@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootsrap Utilities-1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Bootsrap Utilities</h1>
+        </div>
+
+        <button type="button" class="btn"
+        btn-primary rounded-pill>Click here for more information</button>
+        <div>
+        <span class="badge text-small bg-danger rounded-pill">This is my badge</span>
+<div class="container text-center p-4"></div>
+<h2>Intro to Bootstrap</h2>
+        <button type="button" class="btn btn-success">Click for more information</button>
+    </div>
+    <div>
+ 
+        <button type="button" class="btn btn-warning rounded-pill">progress</button>
+
+        <button type="button" class="btn btn-info">info</button>
+
+<div class="progress" role="progressbar">
+    <div class="progress-bar bg-success" style="width:70%">70%</div>
+    
+    
+    </div>

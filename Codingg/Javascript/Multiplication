@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invocation in JavaScript</title>
+   
+</head>
+<body>
+    CLICK HERE
+    <button onclick="sum(200,300,600)">Calculate now</button>
+    
+    <script>
+        function sum(x,y,z) {
+        document.write (x*y*z)
+        }
+    </script>
+</body>
+</html>
+
+<h1>Multiplication example above</h1>
+<body>
+<style>
+h1 {
+  color: blue;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 300%;
+}
+body {
+  background-color: lightgrey;
+}
+</style>
+</body>
+<body>
+<button onclick="Multiply(5)">Calculate now</button>
+<p id="result"></p>
+<script>
+function Multiply(X,y) {
+  if (y == undefined) {
+    y = 1;
+  }
+  alert ("the value of y is undefined " );
+  y= 6;
+}
+var result = X * y;
+document.getElementById("result").innerHTML = "The result is: " + result;
