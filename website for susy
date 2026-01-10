@@ -1,0 +1,37 @@
+<section id="social-media">
+    <h3>Follow Susan's Restaurant</h3>
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Susan's Restaurant. All rights reserved.</p>
+    <p>Opening Hours: 11:00 AM - 11:00 PM</p>
+</footer>
+<style>
+/* Social Media Styling */
+#social-media {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.social-links a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #ff6347; /* Tomato red color for a restaurant feel */
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+</style>
