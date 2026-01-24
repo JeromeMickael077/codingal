@@ -1,0 +1,21 @@
+// A. Object to store information about Tinu
+var tinuInfo = {
+  name: "Tinu",
+  age: 12,
+  grade: "6th"
+};
+
+// B. Array to store her favorite colors
+var favColors = ["Blue", "Pink", "Green", "Yellow"];
+
+// C. Printing Object values using keys
+console.log("Name: " + tinuInfo.name); 
+console.log("Age: " + tinuInfo.age);
+
+// D. Printing Array values using index numbers
+console.log("First Color: " + favColors[0]);
+console.log("Second Color: " + favColors[1]);
+
+// E. Performing an array method (Adding a new color)
+favColors.push("Purple");
+console.log("Updated List: " + favColors);
