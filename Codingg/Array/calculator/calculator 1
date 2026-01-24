@@ -1,37 +1,172 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en"> 
+</html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
-    <title>A simple calculator</title>
+    <title>A Simple Calculator</title>
 </head>
 <body>
     <div id="container">
         <div id="calculator">
+            <div id="result">
+                <div id="history"></div>
+                <div id="output">0</div>
+            </div>
             <div id="keyboard">
                 <button class="operator" id="clear">C</button>
                 <button class="operator" id="backspace">CE</button>
                 <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
+                <button class="operator" id="/">&divide;</button>
+                
                 <button class="number" id="7">7</button>
                 <button class="number" id="8">8</button>
                 <button class="number" id="9">9</button>
                 <button class="operator" id="*">&times;</button>
+                
                 <button class="number" id="4">4</button>
                 <button class="number" id="5">5</button>
                 <button class="number" id="6">6</button>
                 <button class="operator" id="-">-</button>
+                
                 <button class="number" id="1">1</button>
                 <button class="number" id="2">2</button>
                 <button class="number" id="3">3</button>
                 <button class="operator" id="+">+</button>
-                <button class="empty" id="empty"></button>
+                
+                <button class="empty" id="empty1"></button>
                 <button class="number" id="0">0</button>
-                <button class="empty" id="empty"></button>
+                <button class="empty" id="empty2"></button>
                 <button class="operator" id="=">=</button>
+                <div id="output"></div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+<style>
+
+
+#calculator {
+    width: 320px;
+    height: 520px;
+    background-color: blue; /* Main blue body */
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+#history {
+    text-align: right;
+    height: 30px;
+    margin: 0 20px;
+    padding: 10px;
+    font-size: 15px;
+    color: #8b5e5e;
+}
+
+#output {
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 35px;
+    color: white;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.operator, .number {
+    width: 60px;
+    height: 60px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #d9d9d9;
+    cursor: pointer;
+    box-shadow: 0 4px rgba(0,0,0,0.1);
+}
+
+.operator:active, .number:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.empty {
+    background-color: transparent;
+    cursor: default;
+}
+</style>
+<style>
+ body {
+    background-color: orange; /* Added missing semicolon */
+    font-family: 'Open Sans', sans-serif;
+}
+
+#calculator {
+    width: 320px;
+    height: 520px;
+    background-color: blue; /* */
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+#history {
+    text-align: right;
+    height: 30px;
+    margin: 0 20px;
+    padding: 10px;
+    font-size: 15px;
+    color: #ffffff; /* Changed to white so you can see it on blue */
+}
+
+#output {
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 35px;
+    color: white; /* */
+}
+
+#keyboard {
+    display: grid; /* */
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    gap: 10px; 
+    padding-top: 20px;
+}
+
+.operator, .number {
+    width: 60px;
+    height: 60px;
+    background-color: #eeeeee; /* Light grey buttons */
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333; /* Darker text so numbers are readable */
+    cursor: pointer;
+    box-shadow: 0 4px rgba(0,0,0,0.1);
+}
+
+/* Makes buttons look like they are being pressed */
+.operator:active, .number:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.empty {
+    background-color: transparent;
+    border: none; /* Ensure no border shows for empty slots */
+    cursor: default;
+} 
+</style>
