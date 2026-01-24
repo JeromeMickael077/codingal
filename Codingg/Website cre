@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Lessons Master Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 70px; }
+        section { min-height: 400px; padding: 50px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <span class="navbar-brand">CODINGAL</span>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#data">Tinu's Data</a>
+                <a class="nav-link" href="#logic">Logic & Loops</a>
+                <a class="nav-link" href="#math">Math & Functions</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="data">
+            <h2>Data Structures (Objects & Arrays)</h2>
+            <p id="tinu-info"></p>
+            <p id="colors-list"></p>
+        </section>
+
+        <section id="logic">
+            <h2>Logic & Loops</h2>
+            <div id="fruit-loop"></div>
+            <p id="day-msg" class="mt-3 font-weight-bold"></p>
+        </section>
+
+        <section id="math">
+            <h2>Functions & Math</h2>
+            <button class="btn btn-primary" onclick="calculate(10)">Multiply 10 * 2</button>
+            <p id="calc-result" class="mt-2"></p>
+        </section>
+    </div>
+
+    <script>
+        // --- 1. OBJECTS & ARRAYS ---
+        var tinu = { firstName: "Tinu", age: 12 }; // Object
+        var favColors = ["Blue", "Pink", "Green"]; // Array
+        favColors.push("Yellow"); // Array Method
+
+        document.getElementById("tinu-info").innerHTML = tinu.firstName + " is " + tinu.age + " years old.";
+        document.getElementById("colors-list").innerHTML = "Colors: " + favColors.join(" | ");
+
+        // --- 2. LOOPS & SWITCH ---
+        var fruits = ["Apple", "Mango", "Banana", "Grapes"];
+        var loopText = "<b>For Loop List:</b><br>";
+        for (var i = 0; i < fruits.length; i++) { // For Loop
+            loopText += (i + 1) + ". " + fruits[i] + "<br>";
+        }
+        document.getElementById("fruit-loop").innerHTML = loopText;
+
+        var dayMsg;
+        switch (new Date().getDay()) { // Switch Statement
+            case 0: dayMsg = "Today is Sunday"; break;
+            case 6: dayMsg = "Today is Saturday"; break;
+            default: dayMsg = "Today is a Weekday";
+        }
+        document.getElementById("day-msg").innerHTML = dayMsg;
+
+        // --- 3. FUNCTIONS & SCOPE ---
+        var globalMultiplier = 2; // Global Variable
+
+        function calculate(x, y) { // Parameters x and y
+            if (y === undefined) { 
+                y = globalMultiplier; // Default logic
+            }
+            var result = x * y; // Local Variable
+            document.getElementById("calc-result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

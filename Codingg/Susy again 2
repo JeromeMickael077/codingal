@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Lessons: Combined Master Project</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <style>
+        body { padding-top: 70px; font-family: sans-serif; }
+        section { padding: 40px; border-bottom: 2px solid #eee; min-height: 300px; }
+        .debug-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" data-offset="100">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <h5 class="text-white mr-4">CODINGAL</h5>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#dom-section">DOM Tree</a>
+                <a class="nav-link" href="#data-section">Data (Objects/Arrays)</a>
+                <a class="nav-link" href="#logic-section">Logic (Loops/Switch)</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <section id="dom-section">
+            <h2>1. HTML DOM Structure</h2>
+            <p>The DOM is a <b>programming interface</b> where every element is a <b>node</b>.</p>
+            <div class="debug-box">
+                <p id="dom-root">Root Node: &lt;html&gt;</p>
+                <p>Children: &lt;head&gt; and &lt;body&gt;</p>
+            </div>
+        </section>
+
+        <section id="data-section">
+            <h2>2. Data Structures</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Object Properties</h4>
+                    <p id="obj-display" class="debug-box"></p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Array Indexing</h4>
+                    <p id="arr-display" class="debug-box"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="logic-section">
+            <h2>3. JavaScript Logic</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Functions & Scope</h4>
+                    <button class="btn btn-primary" onclick="calculate(5)">Multiply (5 * 2)</button>
+                    <p id="math-out" class="mt-2"></p>
+                </div>
+                <div class="col-md-4">
+                    <h4>For Loop</h4>
+                    <div id="loop-out" class="debug-box"></div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Switch Case</h4>
+                    <p id="day-out" class="debug-box"></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // --- OBJECTS & ARRAYS ---
+        // Objects use "Name-Value" pairs
+        var student = { name: "Riya", age: 8, grade: 3 }; 
+        
+        // Arrays use Index numbers starting from 0
+        var fruits = ["Apple", "Mango", "Grapes", "Watermelon"];
+        fruits.push("Banana"); // Adds to the end
+
+        // Accessing elements using document.getElementById()
+        document.getElementById("obj-display").innerHTML = "Name: " + student.name + "<br>Age: " + student.age;
+        document.getElementById("arr-display").innerHTML = "First Fruit: " + fruits[0] + "<br>Total: " + fruits.length;
+
+
+        // --- FUNCTIONS & SCOPE ---
+        var globalVar = 2; // Global variable (can be accessed anywhere)
+
+        function calculate(x, y) {
+            // Local variable: scope is only inside this function
+            if (y === undefined) { y = globalVar; } 
+            var result = x * y;
+            document.getElementById("math-out").innerHTML = "Result: " + result;
+        }
+
+
+        // --- LOOPS (For Loop) ---
+        var fruitText = "";
+        for (var i = 0; i < fruits.length; i++) {
+            fruitText += fruits[i] + "<br>";
+        }
+        document.getElementById("loop-out").innerHTML = fruitText;
+
+
+        // --- SWITCH STATEMENT (Logic) ---
+        var dayName;
+        switch (new Date().getDay()) {
+            case 0: dayName = "Sunday"; break;
+            case 6: dayName = "Saturday"; break;
+            default: dayName = "a Weekday";
+        }
+        document.getElementById("day-out").innerHTML = "Today is " + dayName;
+
+    </script>
+</body>
+</html>
