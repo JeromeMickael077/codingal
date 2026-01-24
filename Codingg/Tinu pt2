@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinu and Sam's Coding Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 70px; }
+        section { padding: 60px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CODINGAL</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#tinuSection">Tinu's Data</a>
+                <a class="nav-link" href="#functionSection">Functions</a>
+                <a class="nav-link" href="#loopSection">Logic/Loops</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="tinuSection">
+            <h2>Tinu's Information</h2>
+            <p id="tinuDisplay"></p>
+        </section>
+
+        <section id="functionSection">
+            <h2>Functions & Scope</h2>
+            <button class="btn btn-primary" onclick="runCalculation(10)">Run Calculation (10 * 2)</button>
+            <p id="mathResult"></p>
+        </section>
+
+        <section id="loopSection">
+            <h2>Logic & Loops</h2>
+            <p id="loopDisplay"></p>
+            <p id="dayDisplay"></p>
+        </section>
+    </div>
+
+    <script>
+        // --- OBJECTS & ARRAYS (Tinu's Activity) ---
+        var tinu = { name: "Tinu", grade: "6th" }; // Object
+        var colors = ["Pink", "Blue", "Green"];   // Array
+        colors.push("Gold");                       // Array Method
+
+        document.getElementById("tinuDisplay").innerHTML = 
+            tinu.name + " is in " + tinu.grade + ". Her favorite color is " + colors[1];
+
+        // --- FUNCTIONS & SCOPE ---
+        var globalVar = 2; // Global Scope
+
+        function runCalculation(x, y) {
+            if (y === undefined) { y = globalVar; } // Default value logic
+            var result = x * y; // Local Scope
+            document.getElementById("mathResult").innerHTML = "Result: " + result;
+        }
+
+        // --- LOOPS & SWITCH ---
+        // For Loop
+        var fruits = ["Apple", "Mango", "Banana"];
+        var fruitList = "Fruits: ";
+        for (var i = 0; i < fruits.length; i++) {
+            fruitList += fruits[i] + " ";
+        }
+        document.getElementById("loopDisplay").innerHTML = fruitList;
+
+        // Switch Statement
+        var day;
+        switch (new Date().getDay()) {
+            case 0: day = "Sunday"; break;
+            case 6: day = "Saturday"; break;
+            default: day = "a School Day";
+        }
+        document.getElementById("dayDisplay").innerHTML = "Today is " + day;
+
+    </script>
+</body>
+</html>
