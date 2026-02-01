@@ -1,0 +1,13 @@
+def find_fib(n):
+    # The first two numbers are always 0 and 1
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    # Add the two numbers before it
+    return find_fib(n - 1) + find_fib(n - 2)
+
+terms = int(input("How many numbers do you want? "))
+
+for i in range(terms):
+    print(find_fib(i))

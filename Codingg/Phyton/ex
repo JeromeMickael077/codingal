@@ -1,0 +1,15 @@
+
+
+
+total = int(input("Total days: "))
+absent = int(input("Days absent: "))
+
+# Find attended days
+present = total - absent
+# Simple percentage formula
+perc = (present / total) * 100
+
+if perc >= 75:
+    print("You can take the exam!")
+else:
+    print("Too many absences. No exam.")

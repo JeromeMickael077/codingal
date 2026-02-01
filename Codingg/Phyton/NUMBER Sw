@@ -1,0 +1,19 @@
+
+
+x = 5
+y = 9
+z = 1
+
+# If x is bigger than y, swap them
+if x > y:
+    x, y = y, x
+
+# If x is bigger than z, swap them
+if x > z:
+    x, z = z, x
+
+# If y is bigger than z, swap them
+if y > z:
+    y, z = z, y
+
+print("Sorted numbers:", x, y, z)

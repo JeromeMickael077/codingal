@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank App</title>
+</html>
+
+
+
+
+<p>Balance: <span id="total">0</span></p>
+<input type="number" id="user_input">
+<button onclick="add()">Credit</button>
+<button onclick="minus()">Debit</button>
+
+<script>
+  let balance = 0;
+  function add() {
+    let amt = Number(document.getElementById('user_input').value);
+    balance = balance + amt;
+    document.getElementById('total').innerText = balance;
+  }
+  function minus() {
+    let amt = Number(document.getElementById('user_input').value);
+    balance = balance - amt;
+    document.getElementById('total').innerText = balance;
+  }
+</script>
